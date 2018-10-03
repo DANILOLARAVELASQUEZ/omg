@@ -10,16 +10,29 @@
 
 # end
 
-    puts"escriba un nomb
-    re"
-    nombre=gets.chomp.to_s.upcase
+    # puts"escriba un nomb
+    # re"
+    # nombre=gets.chomp.to_s.upcase #transforma todo en mayuscula
 
-    case nombre
-    when "jose".upcase #el Upcase recibe entre mayusculas y minusculas
-        puts "#{nombre} es padre de Jesus"
-    when "maria".upcase
-        puts "#{nombre} es la madre de Jesus"
+    # case nombre
+    # when "jose".upcase #el Upcase recibe mayusculas
+    #     puts "#{nombre} es padre de Jesus"
+    # when "maria".upcase
+    #     puts "#{nombre} es la madre de Jesus"
 
-    else
-        puts "no es padre ni madre de nadie"
+    # else
+    #     puts "no es padre ni madre de nadie"
+    # end
+
+
+    def metodogo
+        puts 'comienzo del metodo'
+        yield #me muestra lo que esta fuera del metodo
+        yield
+        puts 'final del metodo'
     end
+
+    metodogo do
+        puts'soy un bloque que esta afuera pero imprimo dentro del metodo'
+    end
+
